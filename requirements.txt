@@ -1,0 +1,11 @@
+
+transformers
+datasets
+scikit-learn
+torch
+matplotlib
+seaborn
+lime
+optuna
+fastapi
+uvicorn

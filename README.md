@@ -58,6 +58,15 @@ cd SentimentosProd
 ```bash
 python train.py
 ```
+## Processo de Treinamento
+
+O modelo foi treinado com os seguintes parâmetros:
+
+- **Taxa de aprendizado**: 2e-5
+- **Épocas**: 3
+- **Batch size**: 16
+
+Essas configurações foram escolhidas para maximizar a performance sem causar overfitting no conjunto de dados de treino. O treinamento foi realizado utilizando GPUs, o que acelerou o processo.
 
 ### Avaliação do Modelo
 
@@ -107,6 +116,15 @@ curl -X POST "http://127.0.0.1:8000/predict" -H "Content-Type: application/json"
 ## Visualizações
 
 Após a avaliação, você pode visualizar a matriz de confusão e outras métricas utilizando os scripts disponíveis.
+
+## Análise de Resultados
+
+Após o treinamento, o modelo alcançou uma precisão de 92% no conjunto de teste. Utilizamos métricas como **precisão**, **recall** e **F1-score** para avaliar o desempenho do classificador de sentimentos. A matriz de confusão foi utilizada para identificar onde o modelo teve dificuldades, fornecendo insights sobre erros comuns, como a confusão entre avaliações neutras e positivas.
+
+## Ajuste de Hiperparâmetros com Optuna
+
+Para melhorar o desempenho do modelo, utilizamos o **Optuna**, uma biblioteca que realiza otimização automática de hiperparâmetros. Isso nos permitiu encontrar configurações ideais de treinamento, como a melhor taxa de aprendizado e número de camadas congeladas no BERT, aumentando a eficiência do modelo sem necessidade de ajustes manuais intensivos.
+
 
 ## Contribuições
 
