@@ -29,15 +29,13 @@ O conjunto de dados utilizado é o **Yelp Review Full**, que contém:
   - `optuna`: Para ajuste de hiperparâmetros.
   - `fastapi`: Para implementação da API do modelo.
 
-## Como Funciona o BERT
+## Como o BERT toma decisões
 
-O BERT (Bidirectional Encoder Representations from Transformers) é um modelo de linguagem pré-treinado que utiliza mecanismos de atenção para entender o contexto de uma palavra com base em todas as outras palavras na frase. O BERT é treinado em duas tarefas: Masked Language Model e Next Sentence Prediction, permitindo que ele capture relações contextuais e semânticas em um texto.
-
-Ao classificar sentimentos, o modelo BERT utiliza embeddings de palavras que capturam significados contextuais, permitindo decisões mais precisas em relação ao sentimento expresso nas avaliações.
+O BERT (*Bidirectional Encoder Representations from Transformers*) é um modelo de linguagem que entende o contexto de uma palavra considerando as palavras ao seu redor. Ele gera representações ricas de texto, permitindo capturar nuances de significado. No entanto, a natureza "caixa preta" dos modelos de aprendizado profundo pode dificultar a compreensão de como eles tomam decisões.
 
 ## Explicabilidade com LIME
 
-O LIME (Local Interpretable Model-agnostic Explanations) é uma técnica utilizada para explicar as previsões de modelos de aprendizado de máquina. O LIME funciona perturbando a entrada e observando como isso afeta a saída do modelo, ajudando a identificar quais palavras ou frases influenciaram a decisão do modelo. Isso é crucial para garantir que as decisões tomadas pelo modelo sejam compreensíveis e justas.
+LIME significa *Local Interpretable Model-agnostic Explanations* e é uma técnica que pode ser usada para explicar como um modelo de machine learning tomou suas decisões. O valor obtido pelo LIME é a derivada parcial da previsão do modelo em relação à um determinado atributo de interesse. Tal resultado mostra a importância relativa desse atributo ou feature para a previsão do modelo. Esse valor pode ser usado para identificar as features mais importantes para o modelo, ajudando a entender como o modelo toma suas decisões.
 
 
 ## Pré-requisitos
