@@ -29,6 +29,17 @@ O conjunto de dados utilizado é o **Yelp Review Full**, que contém:
   - `optuna`: Para ajuste de hiperparâmetros.
   - `fastapi`: Para implementação da API do modelo.
 
+## Como Funciona o BERT
+
+O BERT (Bidirectional Encoder Representations from Transformers) é um modelo de linguagem pré-treinado que utiliza mecanismos de atenção para entender o contexto de uma palavra com base em todas as outras palavras na frase. O BERT é treinado em duas tarefas: Masked Language Model e Next Sentence Prediction, permitindo que ele capture relações contextuais e semânticas em um texto.
+
+Ao classificar sentimentos, o modelo BERT utiliza embeddings de palavras que capturam significados contextuais, permitindo decisões mais precisas em relação ao sentimento expresso nas avaliações.
+
+## Explicabilidade com LIME
+
+O LIME (Local Interpretable Model-agnostic Explanations) é uma técnica utilizada para explicar as previsões de modelos de aprendizado de máquina. O LIME funciona perturbando a entrada e observando como isso afeta a saída do modelo, ajudando a identificar quais palavras ou frases influenciaram a decisão do modelo. Isso é crucial para garantir que as decisões tomadas pelo modelo sejam compreensíveis e justas.
+
+
 ## Pré-requisitos
 
 Para executar este projeto, você precisará ter instalado:
@@ -125,6 +136,9 @@ Após o treinamento, o modelo alcançou uma precisão de 92% no conjunto de test
 
 Para melhorar o desempenho do modelo, utilizamos o **Optuna**, uma biblioteca que realiza otimização automática de hiperparâmetros. Isso nos permitiu encontrar configurações ideais de treinamento, como a melhor taxa de aprendizado e número de camadas congeladas no BERT, aumentando a eficiência do modelo sem necessidade de ajustes manuais intensivos.
 
+## Considerações Técnicas
+
+Este projeto foi desenvolvido utilizando as bibliotecas `transformers`, `datasets` e `fastapi`. O fluxo de dados do projeto envolve a preparação dos dados, treinamento do modelo, avaliação e implementação da API para previsão de sentimentos.
 
 ## Contribuições
 
