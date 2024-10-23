@@ -1,8 +1,11 @@
-# Classificador de Sentimentos com BERT
+# Classificador de Sentimentos em Avaliações de Produtos com BERT
+Este repositório contém um projeto de NLP que utiliza o modelo BERT para classificar avaliações de produtos em sentimentos positivos e negativos. O projeto foi desenvolvido com a biblioteca Hugging Face Transformers e utiliza o conjunto de dados do Yelp para treinamento e avaliação.
 
-## Descrição
-
-Este projeto implementa um classificador de sentimentos utilizando o modelo pré-treinado BERT (Bidirectional Encoder Representations from Transformers) da biblioteca Hugging Face Transformers. O classificador é treinado para classificar avaliações de produtos do site Yelp em sentimentos positivos e negativos, utilizando um conjunto de dados de avaliações.
+Recursos do projeto:
+- Ajuste fino de um modelo BERT pré-treinado.
+- Classificação binária de sentimentos (positivo ou negativo).
+- Conjunto de dados público de avaliações de produtos (Yelp).
+- Implementado em Python com suporte ao Google Colab.
 
 ## Conjunto de Dados
 
@@ -46,8 +49,8 @@ pip install -r requirements.txt
 1. Clone este repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
+git clone https://github.com/wfaquieri/SentimentosProd.git
+cd SentimentosProd
 ```
 
 2. Execute o script de treinamento:
@@ -121,4 +124,4 @@ Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em c
 
 - **Nome**: Winicius B. Faquieri
 - **Email**: wfaquieri@gmail.com
-- **GitHub**: [swfaquieri](https://github.com/wfaquieri)
+- **GitHub**: [wfaquieri](https://github.com/wfaquieri)
