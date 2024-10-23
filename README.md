@@ -3,7 +3,7 @@ Este repositório contém um projeto de NLP que utiliza o modelo BERT para class
 
 Recursos do projeto:
 - Ajuste fino de um modelo BERT pré-treinado.
-- Classificação binária de sentimentos (positivo ou negativo).
+- Classificação multiclasse de sentimentos.
 - Conjunto de dados público de avaliações de produtos (Yelp).
 - Implementado em Python com suporte ao Google Colab.
 
